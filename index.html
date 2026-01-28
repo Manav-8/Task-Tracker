@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="topBar">
+    <h2>Task Tracker</h2>
+    <button id="themeToggle">Dark Mode</button>
+</div>
+
+<div id="main-layout">
+
+    <!-- LEFT PANEL -->
+    <div id="left-panel">
+        <div id="task-box">
+            <p class="input-heading">Add a New Task</p>
+
+            <input type="text" id="taskInput" placeholder="Enter a task">
+
+            <label class="date-label">Set Due Date</label>
+            <input type="date" id="dueDateInput">
+
+            <label class="date-label">Category</label>
+            <select id="categorySelect">
+                <option value="all">Select category</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+
+            <div id="priorityButtons">
+                <button data-priority="high" class="priority-btn active high-btn">High</button>
+                <button data-priority="medium" class="priority-btn medium-btn">Medium</button>
+                <button data-priority="low" class="priority-btn low-btn">Low</button>
+            </div>
+
+            <button id="addBtn">Add Task</button>
+            <p id="error"></p>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div id="right-panel">
+
+        <div id="filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="pending">Pending</button>
+            <button data-filter="done">Done</button>
+            <button data-filter="high">High</button>
+            <button data-filter="medium">Medium</button>
+            <button data-filter="low">Low</button>
+        </div>
+
+        <div id="category-filter">
+            <label class="date-label">Filter by Category</label>
+            <select id="categoryFilterSelect">
+                <option value="all">All Categories</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
